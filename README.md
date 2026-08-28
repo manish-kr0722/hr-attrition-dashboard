@@ -39,4 +39,4 @@ Design: consistent color system (navy = neutral/baseline, orange-red = risk/attr
 
 # Author
 
-# Manish Kumar Last updated: August 2026
+Manish Kumar Last updated: August 2026
