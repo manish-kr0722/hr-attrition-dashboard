@@ -20,16 +20,22 @@ Attrition is heavily front-loaded in tenure — employees in their first 2 years
 Frequent travel nearly triples attrition risk — 24.91% for frequent travelers vs. 8.00% for non-travelers
 Leavers earn ~30% less — employees who left averaged $4,787/month vs. $6,833/month for those who stayed, a gap of $2,046
 
-# Dataset Source: IBM HR Analytics Employee Attrition & Performance (Kaggle)
-# Size: 1,470 employee records, 35 attributes
-# Type: Fictional dataset created by IBM data scientists for analytics practice
+
+Dataset Source: IBM HR Analytics Employee Attrition & Performance (Kaggle)
+Size: 1,470 employee records, 35 attributes
+Type: Fictional dataset created by IBM data scientists for analytics practice
+
+
 # Tools & Techniques
-# Power BI — data modeling, DAX measures, calculated columns, conditional formatting, page navigation
+
+Power BI — data modeling, DAX measures, calculated columns, conditional formatting, page navigation
+
 # DAX highlights:
 Custom measures for attrition rate, tenure buckets, and income gap analysis
 Dynamic MAXX-based measure to auto-identify the highest-attrition job role
 Conditional formatting rules to visually flag risk categories (≥20% attrition) across multiple charts
-# Design: consistent color system (navy = neutral/baseline, orange-red = risk/attrition, blue = compensation), custom page navigator, and  a dedicated insights page with color-coded findings
+
+Design: consistent color system (navy = neutral/baseline, orange-red = risk/attrition, blue = compensation), custom page navigator, and  a dedicated insights page with color-coded findings
 
 # Author
 
