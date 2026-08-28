@@ -8,10 +8,10 @@ This project explores employee attrition patterns across department, job role, t
 
 # The dashboard is organized into four pages:
 
-# Overview — workforce composition (age, gender, marital status, department, headcount)
-# Attrition — attrition rate broken down by department, job role, business travel, job involvement, and distance from home
-# Compensation & Career — income by job level, income gap between leavers and stayers, promotion cadence, and career progression
-# Insights — synthesized key findings with exact figures and a management recommendation summary
+ Overview — workforce composition (age, gender, marital status, department, headcount)
+ Attrition — attrition rate broken down by department, job role, business travel, job involvement, and distance from home
+ Compensation & Career — income by job level, income gap between leavers and stayers, promotion cadence, and career progression
+ Insights — synthesized key findings with exact figures and a management recommendation summary
 
 
 # Key Findings
