@@ -1,42 +1,90 @@
-# Human Resource Analytics Dashboard
+# HR Workforce and Attrition Analysis
 
-An interactive Power BI dashboard analyzing employee attrition, compensation, and workforce composition using the IBM HR Analytics dataset. Built to identify why employees leave and where the organization should focus retention efforts.
+**Power BI • SQL • Python | Fictional IBM HR dataset**
 
-# Overview
+A practice workforce-retention case study exploring employee composition, attrition, compensation and career patterns.
 
-This project explores employee attrition patterns across department, job role, tenure, compensation, and engagement factors, then translates the findings into a prioritized set of actionable insights for HR leadership.
+## Business question
 
-# The dashboard is organized into four pages:
+Which workforce groups have higher observed attrition, and what should HR leadership investigate before choosing retention actions?
 
- Overview — workforce composition (age, gender, marital status, department, headcount)
- Attrition — attrition rate broken down by department, job role, business travel, job involvement, and distance from home
- Compensation & Career — income by job level, income gap between leavers and stayers, promotion cadence, and career progression
- Insights — synthesized key findings with exact figures and a management recommendation summary
+## Dataset
 
+The fictional IBM HR Analytics dataset contains **1,470 employee records and 35 attributes**. It is suitable for analytics practice; it does not represent a verified employer's current workforce.
 
-# Key Findings
-Sales Representatives are the highest-risk role — 39.76% attrition, more than double the next-highest role (Laboratory Technician, 23.94%)
-Attrition is heavily front-loaded in tenure — employees in their first 2 years leave at 29.82%, nearly 4x the rate of employees with 10+ years (8.13%)
-Frequent travel nearly triples attrition risk — 24.91% for frequent travelers vs. 8.00% for non-travelers
-Leavers earn ~30% less — employees who left averaged $4,787/month vs. $6,833/month for those who stayed, a gap of $2,046
+## Dashboard
 
+The four-page Power BI report covers:
 
-Dataset Source: IBM HR Analytics Employee Attrition & Performance (Kaggle)
-Size: 1,470 employee records, 35 attributes
-Type: Fictional dataset created by IBM data scientists for analytics practice
+- Workforce composition and headcount.
+- Attrition comparisons across employee groups.
+- Compensation and career patterns.
+- Management insights and recommendations.
 
+The repository also includes SQL queries and a Python analysis notebook.
 
-# Tools & Techniques
+## Key findings
 
-Power BI — data modeling, DAX measures, calculated columns, conditional formatting, page navigation
+Figures below were recalculated from the included employee CSV.
 
-# DAX highlights:
-Custom measures for attrition rate, tenure buckets, and income gap analysis
-Dynamic MAXX-based measure to auto-identify the highest-attrition job role
-Conditional formatting rules to visually flag risk categories (≥20% attrition) across multiple charts
+| Measure | Result |
+|---|---:|
+| Overall attrition | 16.12% |
+| Sales Representative attrition | 39.76% |
+| Laboratory Technician attrition | 23.94% |
+| Frequent-traveller attrition | 24.91% |
+| Non-traveller attrition | 8.00% |
+| Average monthly income: employees who left | 4,787 |
+| Average monthly income: employees who stayed | 6,833 |
 
-Design: consistent color system (navy = neutral/baseline, orange-red = risk/attrition, blue = compensation), custom page navigator, and  a dedicated insights page with color-coded findings
+The Sales Representative group contains 83 employees. Income values use the dataset's units; they should not be presented as verified local-market salaries.
 
-# Author
+## Business recommendations
 
-Manish Kumar Last updated: August 2026
+Investigate role-specific retention concerns, travel demands and compensation differences. Review these relationships alongside job level, tenure and other factors before choosing interventions.
+
+The findings describe associations in a fictional dataset rather than proven causes of employee departures. No retention programme was implemented or measured.
+
+## Predictive experiment
+
+The notebook includes an exploratory Random Forest classifier. Its saved attrition-class recall is only 0.09, with F1 of 0.14. Overall accuracy of 0.83 does not make it an effective attrition detector.
+
+The dashboard and descriptive analysis are the primary deliverables.
+
+## How to inspect the work
+
+1. Open the PBIX file in Power BI Desktop and update source paths if prompted.
+2. Inspect the SQL queries and notebook through the links below.
+3. Import the employee CSV into SQL Server before using the SQL script.
+4. Convert Attrition and OverTime from Yes/No into numeric flags where required by the script; do not multiply the raw text columns directly.
+5. For the notebook, install pandas, numpy, matplotlib, seaborn, scikit-learn and Jupyter, and update the CSV path.
+
+## Limitations
+
+- The data is fictional and observational.
+- Differences in attrition rates do not establish causation.
+- Subgroup percentages should be read alongside their record counts.
+- The predictive experiment requires substantial improvement before practical use.
+
+## Dashboard preview
+
+![d1](Dashboard%20Image/d1.jpg)
+
+![d2](Dashboard%20Image/d2.jpg)
+
+![d3](Dashboard%20Image/d3.jpg)
+
+![d4](Dashboard%20Image/d4.jpg)
+
+## Repository files
+
+- [Dataset/HR_Analytics.csv](Dataset/HR_Analytics.csv)
+- [HR Analytics.sql](HR%20Analytics.sql)
+- [HR dashboard.pbix](HR%20dashboard.pbix)
+- [HR_Analytics.ipynb](HR_Analytics.ipynb)
+
+## Author
+
+**Manish Kumar** — banking professional transitioning into Data Analytics.
+
+[LinkedIn](https://www.linkedin.com/in/manish071096/) · [GitHub](https://github.com/manish-kr0722)
